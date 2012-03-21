@@ -3,7 +3,23 @@ Two Lua functions are provided, which can be pasted in [SciTE](http://www.scinti
 First script is "documented" in "README-wrapper.md" file - [check it out](/klonuo/scite-strip-wrapper/blob/master/README-wrapper.md).  
 I'll try to explain second one here, which provides 3 tools to help SciTE user in everyday tasks:
 
-  
+Tools can be set in SciTE properties file:
+
+```
+command.name.22.*=Shell
+command.mode.22.*=subsystem:lua,savebefore:no
+command.22.*=StripDlg func=Shell input1=(+)(-){}
+
+command.name.23.*=Python
+command.mode.23.*=subsystem:lua,savebefore:no
+command.23.*=StripDlg func=Python input1=(+)(-){}
+
+command.name.24.*=Terminal
+command.mode.24.*=subsystem:lua,savebefore:no
+command.24.*=StripDlg func=Terminal input1=(+)(-){}
+```
+
+
 - **Shell action** (which is shell-pipe more precisely)
 
 Current SciTE selection, or if there is not selection - whole text in current tab (buffer), is piped to `sh` through "here-document" and output printed in SciTE output pane. stderr is also redirected there
