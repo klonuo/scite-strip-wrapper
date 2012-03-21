@@ -1,8 +1,8 @@
-This is extension to example wrapper function around SciTE dialog, which could be handy for Linux users
-  
-  
-It provides 3 tools to help SciTE user in everyday tasks:
-  
+Two Lua functions are provided, which can be pasted in SciTE (>3.04) Lua start-up script. First is simple wrapper around SciTE strip dialog feature, and other is applied shell wrapper (variant on first script), which could be handy for Linux users.
+
+First script is "documented" in "README-wrapper.md" file - check it out.  
+I'll try to explain second one here, which provides 3 tools to help SciTE user in everyday tasks:
+
   
 - **Shell action** (which is shell-pipe more precisely)
 
