@@ -11,11 +11,11 @@ command.mode.24.*=subsystem:lua,savebefore:no
 command.24.*=StripDlg func=Lookfor label2=Package button2=Help
 ```
 
-From which StripDlg() will initialize:
- - StripFunc global variable set to "Lookfor", which can be conditioned later in StripExec() function
- - 2 labels: "Lookfor" and "Package"
- - 2 list input boxes
- - 2 buttons: "Go" and "Help"
+From which StripDlg() will initialize:  
+ - StripFunc global variable set to "Lookfor", which can be conditioned later in StripExec() function  
+ - 2 labels: "Lookfor" and "Package"  
+ - 2 list input boxes  
+ - 2 buttons: "Go" and "Help"  
 
 
 **OnStrip()** function is SciTE provided interface to strip dialog feature.
@@ -25,10 +25,10 @@ In this situation, as user can set widgets in different ways, we loop 4 widgets 
 Later, text entered in inputbox is passed to StripExec() function, together with user action which is tracked by SciTE in variable named "control"
 
 
-At last **StripExec()** function executes action:
- - action can be executed on buffer text, or buffer selection, or without both
- - "val1" is text from first inputbox, "val2" is text from second inputbox (or "nil" if it doesn't exist), c is dialog control action
- - global StripFunc variable is conditioned for appropriate action
+At last **StripExec()** function executes action:  
+ - action can be executed on buffer text, or buffer selection, or without both  
+ - "val1" is text from first inputbox, "val2" is text from second inputbox (or "nil" if it doesn't exist), c is dialog control action  
+ - global StripFunc variable is conditioned for appropriate action  
 
 
 Above example in action:
