@@ -59,5 +59,4 @@ function StripExec(val1, val2, c)
             o:close()
         end
     end
-
 end
