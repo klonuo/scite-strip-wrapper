@@ -83,8 +83,7 @@ function StripExec(val1, val2, c)
             if StripFunc == "Python" then
                 run = 'python -c "import sys,re,sets;scite=sys.stdin.read()\n' .. cmd .. '" 2>&1'
             else
---~                 run = 'bash -c "' .. cmd:gsub('$$', '\\$$') .. '" 2>&1'
-                run = 'bash -c "' .. cmd .. '" 2>&1'
+                run = 'sh -c "' .. cmd:gsub('$$', '\\$$') .. '" 2>&1'
             end
             if StripFunc ~= "Terminal" then
                 run = run .. ' << cvJZ1hqModtnAqBG\n' .. text .. '\ncvJZ1hqModtnAqBG'
