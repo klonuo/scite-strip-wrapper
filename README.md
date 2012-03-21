@@ -26,7 +26,7 @@ This action doesn't use piping but literally executes command entered in strip d
 
 All this actions, have "history" feature - there are (+) and (-) buttons which allow saving current snippet or removing it from history. History is stored in a file in user's home folder
 
-![screen-shot](http://i.imgur.com/zmam0l.png)
+![screen-shot](http://i.imgur.com/zmam0.png)
 
 **Known Issues:**
 
