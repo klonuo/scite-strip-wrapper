@@ -12,9 +12,8 @@ command.24.*=StripDlg func=Lookfor label2=Package button2=Help
 ```
 
 From which StripDlg() will initialize:
-
  - StripFunc global variable set to "Lookfor", which can be conditioned later in StripExec() function
- - 2 labels: "Lookfor" and "Module"
+ - 2 labels: "Lookfor" and "Package"
  - 2 list input boxes
  - 2 buttons: "Go" and "Help"
 
@@ -27,10 +26,9 @@ Later, text entered in inputbox is passed to StripExec() function, together with
 
 
 At last **StripExec()** function executes action:
-
-+ action can be executed on buffer text, or buffer selection, or without both
-+ "val1" is text from first inputbox, "val2" is text from second inputbox (or "nil" if it doesn't exist), c is dialog control action
-+ global StripFunc variable is conditioned for appropriate action
+ - action can be executed on buffer text, or buffer selection, or without both
+ - "val1" is text from first inputbox, "val2" is text from second inputbox (or "nil" if it doesn't exist), c is dialog control action
+ - global StripFunc variable is conditioned for appropriate action
 
 
 Above example in action:
