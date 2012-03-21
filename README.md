@@ -33,7 +33,8 @@ All this actions, have "history" feature - there are (+) and (-) buttons which a
 
 ![History feature](http://i.imgur.com/Pz1us.png)
   
-  
+---
+
 **Known Issues:**
 
 - focus is currently not initially on inputbox
