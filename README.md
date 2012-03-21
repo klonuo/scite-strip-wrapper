@@ -1,6 +1,6 @@
 Two Lua functions are provided, which can be pasted in [SciTE](http://www.scintilla.org/SciTE.html) (>3.04) Lua start-up script. First is simple wrapper around SciTE strip dialog feature, and other is applied shell wrapper (variant on first script), which could be handy for Linux users.
 
-First script is "documented" in "README-wrapper.md" file - [check it out](/scite-strip-wrapper/blob/master/README-wrapper.md).  
+First script is "documented" in "README-wrapper.md" file - [check it out](/klonuo/scite-strip-wrapper/blob/master/README-wrapper.md).  
 I'll try to explain second one here, which provides 3 tools to help SciTE user in everyday tasks:
 
   
