@@ -8,14 +8,14 @@ I'll try to explain second one here, which provides 3 tools to help SciTE user i
 
 Current SciTE selection, or if there is not selection - whole text in current tab (buffer), is piped to `sh` through "here-document" and output printed in SciTE output pane. stderr is also redirected there
 
-<a href="http://i.imgur.com/3b0gM.png">![Simple hexdump on selection](http://i.imgur.com/3b0gMs.png)</a>
+<a href="http://i.imgur.com/3b0gM.png">![Simple hexdump on selection](http://i.imgur.com/3b0gMs.png Title="Simple hexdump on selection")</a>
   
   
 - **Python action**
 
 Similarly, SciTE selection or whole buffer if piped to Python interpreter, which stores it as string variable under name "scite" and allows user, one-liner Python freedom on this object.
 
-<a href="http://i.imgur.com/D0BKi.png">![Word frequency](http://i.imgur.com/D0BKis.png)</a>
+<a href="http://i.imgur.com/D0BKi.png">![Word frequency](http://i.imgur.com/D0BKis.png Title="Word frequency")</a>
 
 Also, something like [pyline](http://code.activestate.com/recipes/437932-pyline-a-grep-like-sed-like-command-line-tool/) can be used instead, in Shell Strip dialog, depending on user preference
   
@@ -24,7 +24,7 @@ Also, something like [pyline](http://code.activestate.com/recipes/437932-pyline-
 
 This action doesn't use piping but literally executes command entered in strip dialog inputbox, and outputs on SciTE output pane
 
-<a href="http://i.imgur.com/KDiPZ.png">![Recursive grep](http://i.imgur.com/KDiPZs.png)</a>
+<a href="http://i.imgur.com/KDiPZ.png">![Recursive grep](http://i.imgur.com/KDiPZs.png Title="Recursive grep")</a>
   
   
 - **History**
