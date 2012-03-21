@@ -8,7 +8,7 @@ Example Tool action can be:
 ```
 command.name.24.*=Lookfor
 command.mode.24.*=subsystem:lua,savebefore:no
-command.24.*=StripDlg func=Lookfor label2=Module button2=Help
+command.24.*=StripDlg func=Lookfor label2=Package button2=Help
 ```
 
 From which StripDlg() will initialize:
