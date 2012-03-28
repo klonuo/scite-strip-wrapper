@@ -1,4 +1,5 @@
 This ([simple-strip-wrapper.lua](https://github.com/klonuo/scite-strip-wrapper/blob/master/simple-strip-wrapper.lua)) is one possible wrapper to SciTE Strip [dialog feature](http://www.scintilla.org/SciTELua.html) (explained at the bottom of linked page)
+I made it to be able to create more then one strip dialogs, without using extman director
 
 **StripDlg()** function initializes dialog elements passed to it from SciTE Tool action.
 
