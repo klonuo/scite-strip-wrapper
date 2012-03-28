@@ -1,4 +1,4 @@
-This is one possible wrapper to SciTE Strip ![dialog feature](http://www.scintilla.org/SciTELua.html) (explained at the botom of linked page)
+This is one possible wrapper to SciTE Strip ![dialog feature](http://www.scintilla.org/SciTELua.html)
 
 **StripDlg()** function initializes dialog elements passed to it from SciTE Tool action.
 
