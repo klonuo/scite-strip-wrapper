@@ -1,4 +1,4 @@
-This is extension to example wrapper function around SciTE dialog, which could be handy for Linux users
+This is extension to [example wrapper](blob/master/README-wrapper.md) function around SciTE dialog, which could be handy for Linux users
 
 It provides 2 tools to help SciTE user in everyday tasks:
 
