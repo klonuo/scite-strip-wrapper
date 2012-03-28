@@ -16,17 +16,6 @@ function StripDlg(args)
         print('Invalid call')
     end
 
-    if StripFunc == "Shell" or StripFunc == "Python" then
-        local history = io.open(props["SciteUserHome"] .. "/SciTE-" .. StripFunc .. ".hist", "r")
-        if history then 
-            h = history:read("*a") 
-            history:close()
-        else 
-            h = ""
-        end
-        scite.StripSetList(1, h)
-    end
-
 end
 
 function OnStrip(control, change)
