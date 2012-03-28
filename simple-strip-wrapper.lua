@@ -55,4 +55,5 @@ function StripExec(val1, val2, c)
         print(o:read("*a"))
         o:close()
     end
+
 end

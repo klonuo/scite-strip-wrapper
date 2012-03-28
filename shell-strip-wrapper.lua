@@ -68,26 +68,6 @@ function StripExec(val1, val2, c)
             for i, j in pairs(tt) do history:write(j .. '\n') end
             history:close()
         end
-<<<<<<< HEAD
-=======
---      execute (Go):
-        if val1 ~= "" and c == 4 then
-            cmd = val1:gsub('\\', '\\\\'):gsub('"', '\\"')
-            if StripFunc == "Python" then
-                run = 'python -c "import sys,re,sets;scite=sys.stdin.read()\n' .. cmd .. '" 2>&1'
-            else
-                run = 'sh -c "' .. cmd:gsub('$$', '\\$$') .. '" 2>&1'
-            end
-            if StripFunc ~= "Terminal" then
-                run = run .. ' << cvJZ1hqModtnAqBG\n' .. text .. '\ncvJZ1hqModtnAqBG'
-            end
-            local out = io.popen(run)
-            print(out:read("*a"))
-            out:close()
-        end
---      (Cancel):
-        if c == 5 then scite.StripShow("") end
->>>>>>> 43da8273a0de70a27a23678b8fc7dd5bb7d83496
     end
 
 end
