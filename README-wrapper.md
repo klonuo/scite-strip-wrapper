@@ -25,4 +25,4 @@ At last **StripExec()** function executes action:
 
 Above example in action:
 
-![screen-shot](http://i.imgur.com/mtaMg.png)
+<a href=http://i.imgur.com/I4HYX.png>![screen-shot](http://i.imgur.com/I4HYXs.png)</a>
