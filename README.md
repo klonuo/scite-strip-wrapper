@@ -1,5 +1,14 @@
 This ([shell-strip-wrapper.lua](https://github.com/klonuo/scite-strip-wrapper/blob/master/shell-strip-wrapper.lua)) is extension to [example wrapper](https://github.com/klonuo/scite-strip-wrapper/blob/master/README-wrapper.md) function around SciTE dialog, which could be handy for Linux users
 
+
+```
+command.mode.10.*=subsystem:lua,savebefore:no
+command.10.*=StripDlg func=Shell dlg='Shell:'{}(Go)(+)(–)
+
+command.mode.11.*=subsystem:lua,savebefore:no
+command.11.*=StripDlg func=Python dlg='Python:'{}(Go)(+)(–)
+```
+
 It provides 2 tools to help SciTE user in everyday tasks:
 
 - **Shell action** (which is shell-pipe more precisely)
