@@ -1,4 +1,4 @@
-This ([shell-strip-wrapper.lua](scite-strip-wrapper/blob/master/shell-strip-wrapper.lua)) is extension to [example wrapper](scite-strip-wrapper/blob/master/README-wrapper.md) function around SciTE dialog, which could be handy for Linux users
+This ([shell-strip-wrapper.lua](https://github.com/klonuo/scite-strip-wrapper/blob/master/shell-strip-wrapper.lua)) is extension to [example wrapper](https://github.com/klonuo/scite-strip-wrapper/blob/master/README-wrapper.md) function around SciTE dialog, which could be handy for Linux users
 
 It provides 2 tools to help SciTE user in everyday tasks:
 
