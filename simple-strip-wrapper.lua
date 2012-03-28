@@ -5,28 +5,26 @@ end
 function StripDlg(args)
 
     local t = {}
-    for k, v in string.gmatch(args, "(%w+)=([^ ]+)") do
-        t[k] = v
-    end
+    for k, v in string.gmatch(args, "(%w+)=([^ ]+)") do t[k] = v end
+
     if t["func"] then
-        if not t["label1"] then t["label1"] = t["func"] end
-        if not t["input1"] then t["input1"] = "[]" end
-        if not t["button1"] then t["button1"] = "Go" end
-        if not t["button2"] then t["button2"] = "Cancel" end
+        StripFunc = t["func"]
+        if not t["dlg"] then t["dlg"] = "'" .. t["func"] .. "'[](&OK)(&Cancel)" end
+        _, w = t["dlg"]:gsub("['{}%(%)%[%]]", "")
+        scite.StripShow(t["dlg"]:gsub('\\n', '\n'))
+    else
+        print('Invalid call')
     end
 
-    StripFunc = t["func"]
-
-    if t["label2"] then
-        if t["input2"] then
-            scite.StripShow("'" .. t["label1"] .. "'" .. t["input1"] .. "(&" .. t["button1"] .. ")\n'"
-                                .. t["label2"] .. "'" .. t["input2"] .. "(&" .. t["button2"] .. ")")
-        else
-            scite.StripShow("'" .. t["label1"] .. "'" .. t["input1"] .. "(&" .. t["button1"] .. ")\n'"
-                                .. t["label2"] .. "'" .. t["input1"] .. "(&" .. t["button2"] .. ")")
+    if StripFunc == "Shell" or StripFunc == "Python" then
+        local history = io.open(props["SciteUserHome"] .. "/SciTE-" .. StripFunc .. ".hist", "r")
+        if history then 
+            h = history:read("*a") 
+            history:close()
+        else 
+            h = ""
         end
-    elseif t["label1"] then
-        scite.StripShow("'" .. t["label1"] .. "'" .. t["input1"] .. "(&" .. t["button1"] .. ")(&" .. t["button2"] .. ")'")
+        scite.StripSetList(1, h)
     end
 
 end
@@ -34,7 +32,7 @@ end
 function OnStrip(control, change)
     if change == 1 then
         local val = {}
-        for i=1,4 do
+        for i = 0, w/2-1 do
             if scite.StripValue(i) ~= "" then table.insert(val, scite.StripValue(i)) end
         end
         StripExec(val[1], val[2], control)
@@ -43,21 +41,19 @@ end
 
 function StripExec(val1, val2, c)
 
-    local text = editor:GetSelText()
-    if text == "" then text = editor:GetText() end
+    if editor:GetSelText() == "" then editor:SelectAll() end
 
     if StripFunc == "Lookfor" then
         local val = val1
         if val2 then val = val .. "', '" .. val2 end
-        if c == 5 then
-            local o = io.popen('pydoc numpy.lookfor')
-            print(o:read("*a"))
-            o:close()
+        if c == 5 then 
+            val = 'pydoc numpy.lookfor'
         else
-            local o = io.popen('python -c "from numpy import lookfor; lookfor(\'' .. val .. '\')"')
-            print(o:read("*a"))
-            o:close()
+            val = 'python -c "from numpy import lookfor; lookfor(\'' .. val .. '\')"'
         end
+        local o = io.popen(val)
+        print(o:read("*a"))
+        o:close()
     end
 
 end
