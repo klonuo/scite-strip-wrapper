@@ -13,7 +13,7 @@ It provides 2 tools to help SciTE user in everyday tasks:
 
 - **Shell action** (which is shell-pipe more precisely)
 
-Current SciTE selection, or if there is not selection - whole text in current tab (buffer), is piped to `sh` through "here-document" and output printed in SciTE output pane. stderr is also redirected there
+Current SciTE selection, or if there is not selection - whole text in current tab (buffer), is piped to `sh` through "here-document" and processed output is printed in SciTE output pane. stderr is also redirected there
 
 <a href="http://i.imgur.com/oJcX2.png">![screen-shot](http://i.imgur.com/oJcX2s.png "shell action")</a>
 
