@@ -9,7 +9,7 @@ command.mode.11.*=subsystem:lua,savebefore:no
 command.11.*=StripDlg func=Python dlg='Python:'{}(Go)(+)(–)
 ```
 
-It provides 2 tools to help SciTE user in everyday tasks:
+It provides two tools to help SciTE user in everyday tasks:
 
 - **Shell action** (which is shell-pipe more precisely)
 
