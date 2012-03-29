@@ -11,7 +11,7 @@ command.mode.24.*=subsystem:lua,savebefore:no
 command.24.*=StripDlg func=Lookfor dlg='Lookfor:'[](&Go)\n'Package:'[](&Help)
 ```
 
-StripDlg() function transforms arguments to key=value pairs. Minimum requirement is "func" key, which can be used later for defining custom action
+StripDlg function transforms arguments to key=value pairs. Minimum requirement is "func" key, which can be used later for defining custom action
 
 **OnStrip()** function is SciTE provided interface to strip dialog feature.
 Number of dialog widgets is retrieved in StripDlg() in variable w/2 which is used for enumeration of existing dialog widgets and possible values.
