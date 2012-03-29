@@ -13,7 +13,7 @@ function StripDlg(args)
         _, w = t["dlg"]:gsub("['{}%(%)%[%]]", "")
         scite.StripShow(t["dlg"]:gsub('\\n', '\n'))
     else
-        print('Invalid call')
+        print("Invalid call")
     end
 
     if StripFunc == "Shell" or StripFunc == "Python" then
